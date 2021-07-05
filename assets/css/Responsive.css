@@ -1,0 +1,100 @@
+/* Mobile & tablet */
+
+@media (min-width: 1024px) {
+
+.hide-on-desktop {
+	display: none !important;
+}
+
+}
+
+@media (max-width: 1150px) {
+
+.layout .layout-first .danhmuc .loaisach {
+	width: 236px;
+}
+
+.layout .layout-first .danhmuc .loaisach .danhmucsach {
+	width: 234px !important;
+}
+
+.layout .layout-first .danhmuc .loaisach .item .sub-menu {
+	left: 234px !important;
+}
+
+}
+
+@media (max-width: 1024px) {
+
+.show-on-mobile-tablet {
+	display: flex !important;
+}
+
+.hide-on-mobile-tablet {
+	display: none !important;
+}
+
+.layout-second .slider {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.layout-second .slider .owl_sliderbanner {
+	position: relative !important;
+}
+
+.p1 .danhmuc {
+	margin-right: 0 !important;
+}
+
+.search_product {
+	display: block !important;
+}
+
+.search_product img {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.search_product .product {
+	justify-content: center;
+}
+
+.public .new_public .first {
+	display: none;
+}
+
+.second .owl-list {
+	position: relative !important;
+}
+
+}
+
+@media (max-width: 767px) {
+
+.banner {
+	display: block !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+}
+
+.banner .first {
+	margin-bottom: 20px;
+}
+
+}
+
+@media (max-width: 400px) {
+
+header .title .top-page {
+	padding-right: 10px;
+}
+
+header .title .top-page ul li a,
+header .title .top-page ul li i {
+	font-size: 11px;
+}
+
+}
+
