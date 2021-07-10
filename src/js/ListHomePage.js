@@ -128,7 +128,7 @@ function fetchListBook() {
                 '                            <div class="item">'+
                 '                                <a href=""><img src="'+ book[i].url +'" alt=""></a>'+
                 '                                    <div class="book">'+
-                '                                        <a href=""><span>'+ book[i].Title +'</span></a>'+
+                '                                        <a onclick="xemSanPham('+ book[i].bookID +')" href="ChiTietSanPham.html"><span>'+ book[i].Title +'</span></a>'+
                 '                                            <div class="star">'+
                 '                                                <i class="fas fa-star"></i>'+
                 '                                                <i class="fas fa-star"></i>'+
@@ -146,11 +146,11 @@ function fetchListBook() {
                 countvh++;
                 htmlvh += '<div class="book_shelf col-lg-6 col-md-4 col-sm-6">'+
                 '                        <div class="item">'+
-                '                            <a class="image_book" href="ChiTietSanPham.html">'+
+                '                            <a class="image_book" onclick="xemSanPham('+ book[i].bookID +')" href="ChiTietSanPham.html">'+
                 '                                <img src="'+ book[i].url +'" alt="">'+
                 '                            </a>'+
                 '                            <div class="content">'+
-                '                                <div class="name"><a href="ChiTietSanPham.html">'+ book[i].Title +'</a></div>'+
+                '                                <div class="name"><a onclick="xemSanPham('+ book[i].bookID +')" href="ChiTietSanPham.html">'+ book[i].Title +'</a></div>'+
                 '                                <div class="star">'+
                 '                                    <i class="fas fa-star"></i>'+
                 '                                    <i class="fas fa-star"></i>'+

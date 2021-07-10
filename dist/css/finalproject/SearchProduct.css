@@ -172,6 +172,8 @@ header .title .search_product .product {
     background: #efefef;
 }
 
+/* -------------------------- */
+
 header .title .search_product .cart {
 	display: flex;
 	width: 100%;

@@ -127,7 +127,7 @@ function showCategory() {
             '                            <div class="price-original"><h5>Giá : </h5><span>' + book[i].Price + ' ₫</span></div>'+
             '                            <div class="description"><p>'+ book[i].BookDescription +'</p></div>'+
             '                            <div class="buy-book">'+
-            '                                <input class="number-book" id="number-book" type="number" value="1">'+
+            '                                <input class="number-book" id="number-book" type="number" value="1" min=1 max=100>'+
             '                                <button onclick="onClickDuaVaoGioHang('+ book[i].bookID +')" class="buy-now"><i class="fas fa-shopping-cart"></i>THÊM VÀO GIỎ HÀNG</button>'+  
             '                            </div>'+
             '                            <div class="social-media">'+

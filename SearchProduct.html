@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>Tìm kiếm</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/dist/css/finalproject/Cart.css">
+    <link rel="stylesheet" href="/dist/css/finalproject/SearchProduct.css">
     <link rel="stylesheet" href="/dist/css/finalproject/Responsive.css">
     <link rel="stylesheet" href="/dist/css/all.min.css">
 </head>
@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div class="category-child"> 
-            </div>   
+            </div>
         </div>
     </header>
 
@@ -69,38 +69,46 @@
                         <a href="HomePage.html">TRANG CHỦ</a>
                     </li>
                     <li>
-                        <i class="fas fa-chevron-right"></i>
-                        <a href="Category_LanhDaoVaQuanLy.html">Giỏ hàng</a>
+                        
                     </li>
                 </ul>
             </div>
-            <div class="cart">
-                <div class="cart-head">
-                    <div class="item" style="width: 10%">Ảnh sản phẩm</div>
-                    <div class="item" style="width: 26%; display: flex; justify-content: center;">Tên sản phẩm</div>
-                    <div class="item" style="width: 16%; display: flex; justify-content: center;">Đơn giá</div>
-                    <div class="item" style="width: 14%; display: flex; justify-content: center;">Số lượng</div>
-                    <div class="item" style="width: 15%; display: flex; justify-content: center;">Số tiền</div>
-                    <div class="item" style="width: 7%;  display: flex; justify-content: center;">Xóa</div>
+            <div class="layout-first hide-on-mobile-tablet col-lg-3">
+                <div class="noneselect title-block">
+                    <h2>DANH MỤC SÁCH</h2>
                 </div>
-                <div class="cart-body" id="cart-body">
-                    
+                <div class="noneselect block-content">
+                    <ul>
+                        <li class="list-item">
+                            <ul class="list-sub">
+                                <li class="book-item">
+                                </li>
+                            </ul>
+                        </li>
+                       
+                    </ul>
                 </div>
-                <div class="cart-footer" id="cart-footer">
-                    <h4  style="width: 22% ;display: flex; justify-content: flex-end;">Tổng tiền : </h4>
-                    <div class="sumCount"  style="width: 18%; padding-left: 10px;"></div>
-                    <div class="orderItem" style="width: 30%; display: flex; justify-content: center;">
-                        <a href="#" onclick="orderSuccess1()">Đặt hàng</a>
+                <div class="banner_management">
+                    <img src="/src/img/finalproject/LanhDaoQuanLy/banner_blog_left.jpg" alt="">
+            </div>
+            </div>
+            <div class="layout-second col-lg-9  col-md-12">
+                <div class="list-manager">
+                    <div class="owl_manager owl-carousel row">
+                           
                     </div>
-                    <div class="continue-buy" style="width: 30%; display: flex; justify-content: center;">
-                        <a href="HomePage.html">Tiếp tục mua hàng</a>
-                    </div>
+                </div>
+                <div class="list-page noneselect">
+                    <ul>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">...</a></li>
+                        <li><a href="">8</a></li>
+                        <li><a href=""><i class="fa fa-angle-right"></i></a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="order-success">
-                <p>Đặt hàng thành công</p>
-            </div>
-          
         </div>
     </div>
 
@@ -236,7 +244,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> 
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="/src/js/Cart.js"></script>
+<script src="/src/js/SearchProduct.js"></script>
 <script src="/src/js/TypingBook.js"></script>
 </html>

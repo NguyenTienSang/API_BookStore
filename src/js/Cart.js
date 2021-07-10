@@ -82,21 +82,12 @@ function fetchListCategoryBook() {
         var htmlListCategoryBookTablet = '';
         for(var i=0; i<book.length; i++)
         {
-            // htmlListCategoryBookPC += '<div class="item">'+
-            //   '                    <div class="category">'+
-            //   '                        <a onclick="FilterTypeBook('+ book[i].CategoryID +')" href="ProductType.html">'+ book[i].CategoryDescription +'</a>'+
-            //   '                    </div>'+
-            //   '                </div>';  
-
               htmlListCategoryBookTablet += '<div class="item">'+
               '     <div class="category">'+
               '              <a  onclick="FilterTypeBook('+ book[i].CategoryID +')" href="ProductType.html">'+ book[i].CategoryDescription +'</a>'+
               '     </div>'+
               '</div>';    
         }
-        // var nodeDSSPPC = document.querySelector('.loaisach');
-        // nodeDSSPPC.innerHTML += htmlListCategoryBookPC;
-
         var nodeDSSPTablet = document.querySelector('.category-child');
         nodeDSSPTablet.innerHTML += htmlListCategoryBookTablet;
     })
@@ -302,8 +293,6 @@ function orderSuccess1() {
 
     setTimeout(function  sa(){
         createDetailOrder();
-        // localStorage.removeItem('gioHang'); 
-        // location.reload();
     },2000);
 }
 //------------------------- Tạo hóa đơn
@@ -321,9 +310,11 @@ function orderSuccess() {
 async function createOrder() {
    //Tạo đơn hàng
     //Lấy id khách hàng
-    var CustomerID = localStorage.getItem('idUser');
-    var  Address = '';
+    // var CustomerID = localStorage.getItem('idUser');
+    var CustomerID = 9;
+    var  Address = "";
     var Status = "Chờ xác nhận";
+    var Email = "";
     //Lấy địa chỉ khách hàng
     await  getAddress();
 
@@ -334,6 +325,7 @@ async function createOrder() {
             for(var i=0; i<customer.length; i++) {
                 if(customer[i].CustomerID === parseInt(CustomerID)){
                     Address = customer[i].Address;
+                    Email = customer[i].Email;
                 }
             } 
         } catch (error) {
@@ -348,13 +340,22 @@ async function createOrder() {
             CustomerID,
             Address,
             Status
-
         } 
         createOr(data, () => {
             console.log('1'); 
         })
+        await Email.send({
+            Host : "smtp.gmail.com",
+            Username : "tiensang0007@gmail.com",
+            Password : "QuamonthayTru123",
+            To : `${Email}`,
+            From : "tiensang0007@gmail.com",
+            Subject : "Đơn hàng đã được đặt thành công",
+            Body : "Thông tin chi tiết xem tại cửa hàng"
+        }).then(
+            (message) => alert("Gửi mail thành công")
+          );
     }
-
 }
 
 
@@ -380,9 +381,6 @@ function createOr(data, callback) {
 
 //Tạo chi tiết hóa đơn
 async function createDetailOrder() {
-    var OrderID = 0;
-        var bookID=0;
-        var Quantity=0;
         await getIdOrder();
         async function getIdOrder() {
             try {
@@ -417,6 +415,11 @@ async function createDetailOrder() {
             }
            
         }
+        //Thực hiện xóa giỏ hàng dưới LocalStorage
+        await localStorage.removeItem('gioHang');
+        // await location.reload();
+
+
 }
 
 //-------------------------------------------
